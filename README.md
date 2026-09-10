@@ -31,6 +31,14 @@ python src/train.py --test-size 0.2 --random-state 42
 The script prints the accuracy and the confusion matrix in the terminal, then
 saves the confusion matrix plot to `outputs/confusion_matrix.png` and the
 trained model to `outputs/model.joblib`.
+To load the saved model later and make predictions:
+
+```python
+import joblib
+
+model = joblib.load("outputs/model.joblib")
+predictions = model.predict(X_new)
+```
 
 Result:
 
@@ -65,7 +73,9 @@ iris-classifier/
 │   └── train.py             # reproducible CLI script
 ├── tests/
 │   └── test_train.py        # basic pytest
-├── outputs/                 # created automatically (figures)
+├── outputs/                 # created automatically
+│   ├── confusion_matrix.png
+│   └── model.joblib
 ├── conftest.py              # marks the project root for pytest
 ├── .gitignore
 ├── LICENSE
