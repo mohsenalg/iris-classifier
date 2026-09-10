@@ -1,6 +1,7 @@
 import argparse
 import os
 
+import joblib
 import matplotlib
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
@@ -45,6 +46,7 @@ def train(test_size, random_state):
     disp.plot()
 
     os.makedirs("outputs", exist_ok=True)
+    joblib.dump(model, "outputs/model.joblib")
     plt.savefig("outputs/confusion_matrix.png")
     plt.close()
 
