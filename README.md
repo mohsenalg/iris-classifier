@@ -12,7 +12,7 @@ needed.
 ## Quick start
 
 ```bash
-git clone https://github.com/Mohsenalghasi/iris-classifier.git
+git clone https://github.com/mohsenalg/iris-classifier.git
 cd iris-classifier
 python3 -m venv venv
 source venv/bin/activate
@@ -28,7 +28,9 @@ python src/train.py --test-size 0.2 --random-state 42
 
 ## Output
 
-The script prints the accuracy and the confusion matrix in the terminal, and then saves the confusion matrix plot as a .png file in `outputs/`.
+The script prints the accuracy and the confusion matrix in the terminal, then
+saves the confusion matrix plot to `outputs/confusion_matrix.png` and the
+trained model to `outputs/model.joblib`.
 
 Result:
 
